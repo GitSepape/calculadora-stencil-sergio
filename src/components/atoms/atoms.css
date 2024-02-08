@@ -1,0 +1,11 @@
+.calc-buttons {
+    padding: 12px;
+}
+
+.screen {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: right;
+}
