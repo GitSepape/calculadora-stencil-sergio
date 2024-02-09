@@ -10,26 +10,25 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
 
-    &:hover{
-        background-color: var(--color-dark-green);
-    }
+}
+.calc-buttons:hover{
+    background-color: var(--color-dark-green);
+}
 
-    &:active{
-        background-color: var(--color-green-active);
-    }
+.calc-buttons:active{
+    background-color: var(--color-green-active);
 }
 
 .calc-buttons-reset {
     background-color: var(--color-dark-green);
     transition: background-color 0.3s ease;
+}
+.calc-buttons-reset:hover{
+    background-color: var(--color-light-green);
+}
 
-    &:hover{
-        background-color: var(--color-light-green);
-    }
-
-    &:active{
-        background-color: var(--color-white);
-    }
+.calc-buttons-reset:active{
+    background-color: var(--color-white);
 }
 
 .screen {
