@@ -17,7 +17,6 @@ Stencil components are just Web Components, so they work in any major framework 
 To start building this app, clone this repo and run:
 
 ```bash
-npm init stencil
 npm install
 npm start
 ```
