@@ -37,4 +37,4 @@ Need help? Check this! [here](https://stenciljs.com/docs/my-first-component).
 
 Observations:
 
-To add global styles, I had to go into config.ts and perdonally add the path to my "global.css" file.
+To add global styles, I had to go into config.ts and personally add the path to my "global.css" file.
