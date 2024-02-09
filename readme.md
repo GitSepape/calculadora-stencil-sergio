@@ -14,15 +14,7 @@ Stencil components are just Web Components, so they work in any major framework 
 
 ## Getting Started
 
-To start building a new web component using Stencil, clone this repo to a new directory:
-
-```bash
-git clone https://github.com/ionic-team/stencil-component-starter.git my-component
-cd my-component
-git remote rm origin
-```
-
-and run:
+To start building this app, clone this repo and run:
 
 ```bash
 npm init stencil
@@ -43,3 +35,7 @@ npm test
 ```
 
 Need help? Check this! [here](https://stenciljs.com/docs/my-first-component).
+
+Observations:
+
+To add global styles, I had to go into config.ts and perdonally add the path to my "global.css" file.
