@@ -1,11 +1,8 @@
 :host {
   display: block;
-}
-
-:root {
-  --color-orange: #FF9500;
-  --color-black: #1C1C1C;
-  --color-light-gray: #D4D4D2;
-  --color-dark-grey: #505050;
+  --color-background: #bfe375;
+  --color-text: #1C1C1C;
+  --color-light-green: #e0f3b1;
+  --color-dark-green: #84cc5c;
   --color-white: #fff;
 }

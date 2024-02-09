@@ -8,19 +8,11 @@ import { Component, Prop, h } from "@stencil/core";
 
 export class ButtonCalculator {
 
-    @Prop({ mutable: true }) buttonDisplay: number;
+    @Prop() classCSS: string; //está pensado por si el día de mañana necesitamos añadir botones con distintas dimensiones
 
-    @Prop() symbol: string;
-
-    @Prop() classCSS: string;
-
-    private handleButtonClick(event: MouseEvent) {
-        const button = event.target as HTMLButtonElement;
-        const value = button.textContent;
-        console.log(value);
-    }
+    @Prop() value: string;
 
     render() {
-        return <button class={this.classCSS} onClick={(event: MouseEvent) => this.handleButtonClick(event)}>{this.buttonDisplay}{this.symbol}</button>;
+        return <button class={this.classCSS}>{this.value}</button>;
     }
 }

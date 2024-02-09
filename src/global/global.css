@@ -1,0 +1,42 @@
+:root {
+    --color-background: #bfe375;
+    --color-text: #1C1C1C;
+    --color-light-green: #e0f3b1;
+    --color-dark-green: #71ad51;
+    --color-border: #a4be6c;
+    --color-white: #fff;
+    --color-green-active: #45a049;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-image: radial-gradient(circle, #e0f3b1, #daf0a7, #d3ee9c, #cdeb92, #c6e988, #c6e988, #c5e989, #c5e989, #cbeb94, #d1eda0, #d6eeab, #dcf0b6);    display: flex;
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+.calculator {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 280px;
+    padding: 16px 8px 8px 8px;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-background);
+}

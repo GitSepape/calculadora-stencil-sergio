@@ -7,11 +7,13 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ButtonCalculator {
-        "buttonDisplay": number;
         "classCSS": string;
-        "symbol": string;
+        "value": string;
     }
-    interface MyCalculator {
+    interface CalculatorComponent {
+    }
+    interface HistoryCalculator {
+        "calculations": string[];
     }
     interface MyComponent {
         /**
@@ -30,6 +32,7 @@ export namespace Components {
     interface MyRow {
     }
     interface ScreenCalculator {
+        "value": string;
     }
 }
 declare global {
@@ -39,11 +42,17 @@ declare global {
         prototype: HTMLButtonCalculatorElement;
         new (): HTMLButtonCalculatorElement;
     };
-    interface HTMLMyCalculatorElement extends Components.MyCalculator, HTMLStencilElement {
+    interface HTMLCalculatorComponentElement extends Components.CalculatorComponent, HTMLStencilElement {
     }
-    var HTMLMyCalculatorElement: {
-        prototype: HTMLMyCalculatorElement;
-        new (): HTMLMyCalculatorElement;
+    var HTMLCalculatorComponentElement: {
+        prototype: HTMLCalculatorComponentElement;
+        new (): HTMLCalculatorComponentElement;
+    };
+    interface HTMLHistoryCalculatorElement extends Components.HistoryCalculator, HTMLStencilElement {
+    }
+    var HTMLHistoryCalculatorElement: {
+        prototype: HTMLHistoryCalculatorElement;
+        new (): HTMLHistoryCalculatorElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -65,7 +74,8 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "button-calculator": HTMLButtonCalculatorElement;
-        "my-calculator": HTMLMyCalculatorElement;
+        "calculator-component": HTMLCalculatorComponentElement;
+        "history-calculator": HTMLHistoryCalculatorElement;
         "my-component": HTMLMyComponentElement;
         "my-row": HTMLMyRowElement;
         "screen-calculator": HTMLScreenCalculatorElement;
@@ -73,11 +83,13 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ButtonCalculator {
-        "buttonDisplay"?: number;
         "classCSS"?: string;
-        "symbol"?: string;
+        "value"?: string;
     }
-    interface MyCalculator {
+    interface CalculatorComponent {
+    }
+    interface HistoryCalculator {
+        "calculations"?: string[];
     }
     interface MyComponent {
         /**
@@ -96,10 +108,12 @@ declare namespace LocalJSX {
     interface MyRow {
     }
     interface ScreenCalculator {
+        "value"?: string;
     }
     interface IntrinsicElements {
         "button-calculator": ButtonCalculator;
-        "my-calculator": MyCalculator;
+        "calculator-component": CalculatorComponent;
+        "history-calculator": HistoryCalculator;
         "my-component": MyComponent;
         "my-row": MyRow;
         "screen-calculator": ScreenCalculator;
@@ -110,7 +124,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "button-calculator": LocalJSX.ButtonCalculator & JSXBase.HTMLAttributes<HTMLButtonCalculatorElement>;
-            "my-calculator": LocalJSX.MyCalculator & JSXBase.HTMLAttributes<HTMLMyCalculatorElement>;
+            "calculator-component": LocalJSX.CalculatorComponent & JSXBase.HTMLAttributes<HTMLCalculatorComponentElement>;
+            "history-calculator": LocalJSX.HistoryCalculator & JSXBase.HTMLAttributes<HTMLHistoryCalculatorElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-row": LocalJSX.MyRow & JSXBase.HTMLAttributes<HTMLMyRowElement>;
             "screen-calculator": LocalJSX.ScreenCalculator & JSXBase.HTMLAttributes<HTMLScreenCalculatorElement>;

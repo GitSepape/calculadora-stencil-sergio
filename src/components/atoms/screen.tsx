@@ -1,4 +1,4 @@
-import { Component, h } from "@stencil/core";
+import { Component, Prop, h } from "@stencil/core";
 
 @Component({
     tag: 'screen-calculator',
@@ -7,8 +7,10 @@ import { Component, h } from "@stencil/core";
 })
 export class ScreenCalculator {
 
+    @Prop() value: string;
 
     render() {
-        return <input class="screen" type="text" placeholder="0" disabled></input>
+        return <input class="screen" type="text" placeholder="0" value={this.value} disabled></input>
     }
 }
+
